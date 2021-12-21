@@ -39,13 +39,13 @@ public class ConfigProvider {
     private EnvironmentName getEnvNameWithYFlag() throws Exception {
         Environment environment = readConfig().getEnvironment();
         if (environment.getTest().getFlag().equals("Y")) {
-            logger.info("Read environment from flag value");
+            logger.info("Read environment from test");
             return EnvironmentName.TEST;
         } else if (environment.getIntegrate().getFlag().equals("Y")) {
-            logger.info("Read environment from flag value");
+            logger.info("Read environment from Integrate");
             return EnvironmentName.INTEGRATE;
         } else if (environment.getStag().getFlag().equals("Y")) {
-            logger.info("Read environment from flag value");
+            logger.info("Read environment from stag");
             return EnvironmentName.STAG;
         } else {
             return null;

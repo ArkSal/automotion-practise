@@ -10,20 +10,18 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class DriverFactory {
     //    private  EventFiringWebDriver driver;
 //    private  WebListener webListener;
-    protected WebDriver driver;
 
     public WebDriver getDriverOptions(Browsers browser) {
         switch (browser) {
             case CHROME:
                 WebDriverManager.chromedriver().setup();
-                driver = getChromeDriver();
-                break;
+                return getChromeDriver();
+
             case FIREFOX:
                 WebDriverManager.firefoxdriver().setup();
-                driver = getFirefoxDriver();
-                break;
+                return getFirefoxDriver();
         }
-        return driver;
+        return null;
     }
 
     private WebDriver getChromeDriver() {
