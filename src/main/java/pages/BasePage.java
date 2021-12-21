@@ -35,19 +35,19 @@ public abstract class BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void clickOnElement(WebElement elementToClick){
+    public void clickOnElement(WebElement elementToClick) {
         String elementText = elementToClick.getText();
         webDriverWait.until(ExpectedConditions.elementToBeClickable(elementToClick)).click();
         logger.info("Clicked on webelement {}", elementText);
     }
 
-    public void sendKeysToElement(WebElement elementToSendKeys, String keyToSend){
+    public void sendKeysToElement(WebElement elementToSendKeys, String keyToSend) {
         elementToSendKeys.clear();
         webDriverWait.until(ExpectedConditions.visibilityOf(elementToSendKeys)).sendKeys(keyToSend);
         logger.info("String {} sent to {} element", keyToSend, elementToSendKeys.getAttribute("class"));
     }
 
-    public void mouseHover(WebElement element, String loggerValueToRead){
+    public void mouseHover(WebElement element, String loggerValueToRead) {
         eventFiringMouse = new EventFiringMouse(driver, webListener);
         Locatable item = (Locatable) webDriverWait.until(ExpectedConditions.visibilityOf(element));
         Coordinates coordinates = item.getCoordinates();

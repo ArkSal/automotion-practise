@@ -15,7 +15,7 @@ public class IFrameProductPage extends BasePage {
     @FindBy(css = "#thumbs_list_frame a")
     private List<WebElement> thumbImagesList;
 
-    public IFrameProductPage cycleThoughProductImages(){
+    public IFrameProductPage cycleThoughProductImages() {
         webDriverWait.until(ExpectedConditions.visibilityOf(thumbImagesList.get(0)));
         for (WebElement element : thumbImagesList) {
             try {
@@ -28,7 +28,7 @@ public class IFrameProductPage extends BasePage {
         return this;
     }
 
-    public IFrameProductPage switchToIFrame(){
+    public IFrameProductPage switchToIFrame() {
         driver.switchTo().frame(0);
         logger.info("Switched to new iframe window");
         return this;

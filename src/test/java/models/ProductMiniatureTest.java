@@ -4,13 +4,11 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-
-public class RegisterUserTest extends BaseTest {
-    private Logger logger = LoggerFactory.getLogger(RegisterUserTest.class);
+public class ProductMiniatureTest extends BaseTest {
+    private Logger logger = LoggerFactory.getLogger(ProductMiniatureTest.class);
 
     @Test
-    void loginWithNonExistingUser(){
+    void cyclingThroughWomenBlousesCategoryImages() {
         application.open()
                 .mouseHoverWomen()
                 .goToBlousesCatalog()

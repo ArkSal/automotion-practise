@@ -4,7 +4,6 @@ import base.Application;
 import base.factory.DriverFactory;
 import models.configuration.EnvironmentConfig;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;

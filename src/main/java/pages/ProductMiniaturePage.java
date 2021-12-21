@@ -24,7 +24,7 @@ public class ProductMiniaturePage {
         return quickViewButton;
     }
 
-    public WebElement getImageWindow(){
+    public WebElement getImageWindow() {
         return imageWindow;
     }
 }

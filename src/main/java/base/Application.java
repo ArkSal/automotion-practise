@@ -16,7 +16,7 @@ public class Application extends BasePage {
         super(driver);
     }
 
-    public HeaderPage open(){
+    public HeaderPage open() {
         String applicationAddress = environmentConfig.getUlr();
         logger.info("Opening application at: {}", applicationAddress);
 
@@ -25,7 +25,7 @@ public class Application extends BasePage {
         return new HeaderPage(driver);
     }
 
-    public void close(){
+    public void close() {
         logger.info("Closing application");
         driver.quit();
     }
