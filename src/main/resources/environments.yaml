@@ -1,0 +1,16 @@
+environment:
+  integrate:
+    ulr: "http://automationpractice.com/"
+    browser: "CHROME"
+    wait: "10"
+    flag: "N"
+  test:
+    ulr: "http://automationpractice.com/"
+    browser: "CHROME"
+    wait: "20"
+    flag: "Y"
+  stag:
+    ulr: "http://automationpractice.com/"
+    browser: "FIREFOX"
+    wait: "20"
+    flag: "N"
