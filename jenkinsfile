@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Compiled') {
+            steps {
+                echo 'Arek says'
+                git branch:'${branch}', url:'https://github.com/ArkSal/automotion-practise.git'
+                bat 'mvn clean compile'
+                echo 'Its done'
+            }
+        }
+    stage('Test') {
+            steps {
+                bat 'mvn clean test'
+            }
+        }
+    }
+}
