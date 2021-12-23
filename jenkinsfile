@@ -14,12 +14,20 @@ pipeline {
             steps {
                 bat 'mvn clean test'
             }
+<<<<<<< Updated upstream
         
+=======
+
+>>>>>>> Stashed changes
         post{
                 always{
                     junit '**/target/surefire-reports/TEST-models.ProductMiniatureTest.xml'
                 }
+<<<<<<< Updated upstream
              }
+=======
+            }
+>>>>>>> Stashed changes
         }
     }
 }
